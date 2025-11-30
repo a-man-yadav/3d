@@ -13,21 +13,21 @@ const Navbar = () => {
   const tl = useRef(null);
   const icon = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [showBurger, setShowBurger] = useState(true)
+  const [showBurger, setShowBurger] = useState(true);
 
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
     gsap.set([linkRef.current, contactRef.current], {
       autoAlpha: 0,
-      x: 20,
+      x: 40,
     });
 
     tl.current = gsap
       .timeline({ paused: true })
       .to(navRef.current, {
-        xPercent: 0,
+        xPercent: 10,
         duration: 1,
-        ease: "power3.out",
+        ease: "back.out",
       })
       .to(
         linkRef.current,
@@ -101,7 +101,7 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col w-full justify-between h-full px-10 uppercase bg-black text-white/70 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        className="fixed z-50 flex flex-col w-full justify-between h-full px-10 uppercase bg-black/95 text-white/70 py-28 gap-y-10 md:w-1/2 md:left-1/2"
       >
         <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
           {navLinks.map((section, index) => (
@@ -111,7 +111,7 @@ const Navbar = () => {
                 smooth
                 offset={0}
                 duration={1000}
-                className="transition-all duration-300 cursor-pointer hover:text-white"
+                className="transition-all duration-300 cursor-pointer hover:text-white "
               >
                 {section}
               </Link>
@@ -128,18 +128,16 @@ const Navbar = () => {
               AmanYadav@gmail.com
             </p>
           </div>
-          <div className="font-light">
-            <p className="tracking-wider text-white/50">Social Media</p>
+          <div className="font-light mr-20">
+            <p className="tracking-wider text-white/50 ">Social Media</p>
             <div className="flex flex-col flex-wrap md:flex-row gap-x-2">
               {socials.map((site, index) => (
                 <a
                   href={site.href}
-                  className="text-sm  leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300 "
+                  className="text-2xl leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300 "
                   key={index}
                 >
-                  {"{"}
-                  {site.name}
-                  {"}"}
+                  <site.icon />
                 </a>
               ))}
             </div>
@@ -151,10 +149,10 @@ const Navbar = () => {
         onClick={toggleMenu}
         className="fixed top-4 right-10 bg-black z-50 gap-1 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer w-8 h-8 md:h-10 md:w-10 rounded-full"
         style={
-            showBurger
-              ? { clipPath: "circle(50% at 50% 50%)" }
-              : { clipPath: "circle(0% at 50% 50%)" }
-          }
+          showBurger
+            ? { clipPath: "circle(50% at 50% 50%)" }
+            : { clipPath: "circle(0% at 50% 50%)" }
+        }
       >
         <span
           ref={topLineRef}

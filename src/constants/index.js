@@ -1,3 +1,10 @@
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+
+const socials = [
+  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/", icon: FaInstagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/", icon: FaLinkedin },
+  { name: "GitHub", href: "https://github.com/Ali-Sanati", icon: FaGithub },
+];
 const navLinks = ["Home", "Services", "About", "Work", "Contact"];
 
 
@@ -172,14 +179,6 @@ const projects = [
       ],
     },
   ];
-const socials = [
-    { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
-    {
-      name: "Youtube",
-      href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
-    },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-    { name: "GitHub", href: "https://github.com/Ali-Sanati" },
-  ];
+
 
 export {navLinks, servicesData, projects, socials};
