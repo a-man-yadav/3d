@@ -29,7 +29,7 @@ const ServiceSummary = () => {
         }
     });
     gsap.to("#title-service-4", {
-        xPercent: -100,
+        xPercent: -70,
         scrollTrigger: {
             target: "#title-service-4",
             scrub: true

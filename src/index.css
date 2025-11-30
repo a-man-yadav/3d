@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
 /* Amiamie Regular */
 @font-face {
   font-family: "Amiamie";
