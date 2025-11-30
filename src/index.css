@@ -114,12 +114,12 @@ body {
   font-family: var(--font-amiamie);
 }
 
-@utility clip-path {
+@utility clip-path { 
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
 
 @utility banner-text-responsive {
-  @apply text-[60px] sm:text-[85px] md:text-[105px] lg:text-[145px] xl:text-[160px] 2xl:text-[170px] leading-12 sm:leading-20 lg:leading-28 xl:leading-30;
+  @apply text-[60px] sm:text-[85px] md:text-[105px] lg:text-[145px] xl:text-[160px] 2xl:text-[170px] leading-10 sm:leading-13 md:leading-17 lg:leading-23 xl:leading-26;
 }
 
 @utility value-text-responsive {
