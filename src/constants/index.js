@@ -5,7 +5,7 @@ const socials = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/", icon: FaLinkedin },
   { name: "GitHub", href: "https://github.com/Ali-Sanati", icon: FaGithub },
 ];
-const navLinks = ["Home", "Services", "About", "Work", "Contact"];
+const navLinks = ["home", "services", "about", "work", "contact"];
 
 const items = ["Innovation", "Precision", "Trust", "Collaboration", "Excellence"]
 

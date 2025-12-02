@@ -125,23 +125,24 @@ const Marquee = ({
       paddingRight: 30,
       reversed: reverse,
     });
-      
-      Observer.create({
-        onChangeY(self) {
-          let factor = 2.5;
-          if ((!reverse && self.deltaY < 0 ) || (reverse && self.deltaY > 0)) {
-            factor *= -1;
-          } 
-          gsap.timeline({
+
+    Observer.create({
+      onChangeY(self) {
+        let factor = 2.5;
+        if ((!reverse && self.deltaY < 0) || (reverse && self.deltaY > 0)) {
+          factor *= -1;
+        }
+        gsap
+          .timeline({
             defaults: {
               ease: "none",
-            }
+            },
           })
-            .to(tl, { timeScale: factor * 2.5, duration: 0.2, overwrite: true, })
-            .to(tl, { timeScale: factor / 2.5, duration: 1 }, "+=0.3");
-        }
-      });
-  }, [items, reverse])
+          .to(tl, { timeScale: factor * 2.5, duration: 0.2, overwrite: true })
+          .to(tl, { timeScale: factor / 2.5, duration: 1 }, "+=0.3");
+      },
+    });
+  }, [items, reverse]);
 
   return (
     <div
@@ -152,7 +153,7 @@ const Marquee = ({
         {items.map((text, index) => (
           <span
             key={index}
-            ref={el => itemsRef.current[index] = el}
+            ref={(el) => (itemsRef.current[index] = el)}
             className="flex items-center px-16 gap-x-32 "
           >
             {text} <Icon icon={icon} className={iconClassName} />

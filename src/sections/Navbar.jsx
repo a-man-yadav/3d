@@ -12,6 +12,7 @@ const Navbar = () => {
   const bottomLineRef = useRef(null);
   const tl = useRef(null);
   const icon = useRef(null);
+  const burgerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
 
@@ -26,7 +27,7 @@ const Navbar = () => {
       .timeline({ paused: true })
       .to(navRef.current, {
         xPercent: 10,
-        duration: 1,
+        duration: 0.8,
         ease: "back.out",
       })
       .to(
@@ -56,7 +57,7 @@ const Navbar = () => {
       .to(topLineRef.current, {
         rotate: 45,
         y: 3.3,
-        duration: 0.7,
+        duration: 0.5,
         ease: "power2.inOut",
       })
       .to(
@@ -64,13 +65,13 @@ const Navbar = () => {
         {
           rotate: -45,
           y: -3.3,
-          duration: 0.7,
+          duration: 0.5,
           ease: "power2.inOut",
         },
         "<"
       );
   }, []);
-
+  //this is to show and hide that hamberger open/close icon
   useEffect(() => {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
@@ -85,7 +86,7 @@ const Navbar = () => {
     });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  //for opening and closing navbar
   const toggleMenu = () => {
     if (isOpen) {
       tl.current.reverse();
@@ -96,6 +97,30 @@ const Navbar = () => {
     }
     setIsOpen(!isOpen);
   };
+  // this one is for outside click that closes the nav
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!isOpen) return;
+
+      const nav = navRef.current;
+      const burger = burgerRef.current;
+
+      // whenever clicked outside both nav & burger
+      if (
+        nav &&
+        !nav.contains(e.target) &&
+        burger &&
+        !burger.contains(e.target)
+      ) {
+        tl.current.reverse();
+        icon.current.reverse();
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside); // removing is important so that the event does not propogate multiple times and creates animation errors
+  }, [isOpen]);
 
   return (
     <>
@@ -146,6 +171,7 @@ const Navbar = () => {
       </nav>
 
       <div
+        ref={burgerRef}
         onClick={toggleMenu}
         className="fixed top-4 right-10 bg-black z-50 gap-1 flex flex-col items-center justify-center transition-all duration-300 cursor-pointer w-8 h-8 md:h-10 md:w-10 rounded-full"
         style={

@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Services = () => {
   const text =
     "I build secure, high-performance full-stack apps with \n" +

@@ -11,19 +11,19 @@ const AnimatedText = ({ text, className }) => {
   const lines = text.split("\n").filter((line) => line.trim() !== "");
 
   useGSAP(() => {
-    if(lineRefs.current.length > 0){
-        gsap.from(lineRefs.current, {
-            y:100,
-            opacity:0,
-            duration: 1,
-            stagger: 0.3,
-            ease: 'back.out',
-            scrollTrigger: {
-                trigger: containerRef.current
-            }
-        })
+    if (lineRefs.current.length > 0) {
+      gsap.from(lineRefs.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "back.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+        },
+      });
     }
-  })
+  });
 
   return (
     <div ref={containerRef} className={className}>

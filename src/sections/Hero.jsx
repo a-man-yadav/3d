@@ -12,7 +12,10 @@ const Hero = () => {
     "results driven webs/apps";
 
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen bg-[#d47373]/10">
+    <section
+      id="home"
+      className="flex flex-col justify-end min-h-screen bg-[#d47373]/10"
+    >
       <AnimatedHeader
         subtitle={"404 No Bugs Found"}
         tilte={"Aman Yadav"}

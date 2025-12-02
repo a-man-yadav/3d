@@ -8,32 +8,32 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceSummary = () => {
   useGSAP(() => {
     gsap.to("#title-service-1", {
-        xPercent: 20,
-        scrollTrigger: {
-            target: "#title-service-1",
-            scrub: true
-        }
+      xPercent: 20,
+      scrollTrigger: {
+        target: "#title-service-1",
+        scrub: true,
+      },
     });
     gsap.to("#title-service-2", {
-        xPercent: -30,
-        scrollTrigger: {
-            target: "#title-service-2",
-            scrub: true
-        }
+      xPercent: -30,
+      scrollTrigger: {
+        target: "#title-service-2",
+        scrub: true,
+      },
     });
     gsap.to("#title-service-3", {
-        xPercent: 60,
-        scrollTrigger: {
-            target: "#title-service-3",
-            scrub: true
-        }
+      xPercent: 60,
+      scrollTrigger: {
+        target: "#title-service-3",
+        scrub: true,
+      },
     });
     gsap.to("#title-service-4", {
-        xPercent: -70,
-        scrollTrigger: {
-            target: "#title-service-4",
-            scrub: true
-        }
+      xPercent: -70,
+      scrollTrigger: {
+        target: "#title-service-4",
+        scrub: true,
+      },
     });
   });
 

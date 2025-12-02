@@ -17,26 +17,33 @@ export function Planet(props) {
     const tl = gsap.timeline();
 
     tl.from(shapeContainer.current.position, {
-        y:5,
-        duration:5,
-        ease: 'back.out'
+      y: 5,
+      duration: 5,
+      ease: "back.out",
     })
-    .from(spheresRef.current.rotation, {
-        x:0,
-        y:Math.PI,
-        z:-Math.PI,
-        duration: 15,
-        ease: 'power1.inOut'
-    }, "-=50%")
-    .from(ringRef.current.rotation, {
-        x:0.8,
-        y:0,
-        z:0,
-        duration: 15,
-        ease: 'power1.inOut'
-    }, "<")
-  }, [])
-
+      .from(
+        spheresRef.current.rotation,
+        {
+          x: 0,
+          y: Math.PI,
+          z: -Math.PI,
+          duration: 15,
+          ease: "power1.inOut",
+        },
+        "-=50%"
+      )
+      .from(
+        ringRef.current.rotation,
+        {
+          x: 0.8,
+          y: 0,
+          z: 0,
+          duration: 15,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+  }, []);
 
   return (
     <group ref={shapeContainer} {...props} dispose={null}>
