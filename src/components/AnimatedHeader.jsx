@@ -44,7 +44,7 @@ const AnimatedHeader = ({subtitle, tilte, text, textColor, withScrollTrigger = f
           </p>
           {/* // tracking is for  letter spacing */}
           <div className="px-10">
-            <h1 className={`flex flex-col flex-wrap gap-12 ${textColor} uppercase banner-text-responsive sm:gap-16  md:block`}>
+            <h1 className={`flex flex-col flex-wrap gap-12 ${textColor} uppercase mb-1 banner-text-responsive sm:gap-16  md:block`}>
               {tilte}
             </h1>
           </div>
@@ -53,7 +53,7 @@ const AnimatedHeader = ({subtitle, tilte, text, textColor, withScrollTrigger = f
       <div className={`relative px-10 ${textColor}`}>
         <div className={`px-10 ${textColor} border-t-3`}>
           <div className="py-10 sm:py-12 text-end">
-            <AnimatedText text={text} className="font-light uppercase " />
+            <AnimatedText text={text} className={`font-light uppercase value-text-responsive ${textColor} `} />
           </div>
         </div>
       </div>

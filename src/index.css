@@ -128,7 +128,7 @@ body {
 }
 
 @utility value-text-responsive {
-  @apply text-2xl md:text-[26px] lg:text-[32px];
+  @apply text-2xl md:text-[22px] lg:text-[28px];
 }
 
 @utility marquee-text-responsive {
