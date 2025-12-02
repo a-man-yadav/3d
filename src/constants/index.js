@@ -1,9 +1,9 @@
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/", icon: FaInstagram },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/", icon: FaLinkedin },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati", icon: FaGithub },
+  { name: "Instagram", href: "https://www.instagram.com/a_man_yadav_", icon: FaInstagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/aman-yadav-799a1b39b/", icon: FaLinkedin },
+  { name: "GitHub", href: "https://github.com/a-man-yadav/", icon: FaGithub },
 ];
 const navLinks = ["home", "services", "about", "work", "contact"];
 
