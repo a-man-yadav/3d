@@ -7,6 +7,7 @@ const socials = [
 ];
 const navLinks = ["Home", "Services", "About", "Work", "Contact"];
 
+const items = ["Innovation", "Precision", "Trust", "Collaboration", "Excellence"]
 
  const servicesData = [
     {
@@ -181,4 +182,4 @@ const projects = [
   ];
 
 
-export {navLinks, servicesData, projects, socials};
+export {navLinks, servicesData, projects, socials, items};
