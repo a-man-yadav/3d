@@ -35,7 +35,7 @@ const Services = () => {
     <section id="services" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeader
         subtitle={"Behind the scene, Beyond the screen"}
-        tilte={"Service"}
+        tilte={"What I Build"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
@@ -60,9 +60,9 @@ const Services = () => {
               <p className="text-base text-white/60 lg:text-xl leading-relaxed text-pretty ">
                 {service.description}{" "}
               </p>
-              <div className="flex flex-col gap-2 text-2xl sm:gap-4 lg:text-3xl text-white/80">
+              <div className="flex flex-col gap-2 w-[100vw] text-2xl sm:gap-4 lg:text-3xl text-white/80">
                 {service.items.map((item, itemIndex) => (
-                  <div key={`item-${index}-${itemIndex}`}>
+                  <div  key={`item-${index}-${itemIndex}`}>
                     <h3 className="flex">
                       <span className="mr-12 text-lg text-white/30">
                         0{itemIndex + 1}

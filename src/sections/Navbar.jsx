@@ -72,20 +72,21 @@ const Navbar = () => {
       );
   }, []);
   //this is to show and hide that hamberger open/close icon
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  // useEffect(() => {
+  //   let lastScrollY = window.scrollY;
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
 
-      setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
+  //     setShowBurger(currentScrollY <= lastScrollY || currentScrollY < 10);
 
-      lastScrollY = currentScrollY;
-    };
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //     lastScrollY = currentScrollY;
+  //   };
+  //   window.addEventListener("scroll", handleScroll, {
+  //     passive: true,
+  //   });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  
   //for opening and closing navbar
   const toggleMenu = () => {
     if (isOpen) {
@@ -126,7 +127,7 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col w-full justify-between h-full px-10 uppercase bg-black/95 text-white/70 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        className="fixed z-50 flex flex-col w-full justify-between h-full px-10 uppercase bg-black/95 text-white/70 py-4 gap-y-10 md:w-1/2 md:left-1/2"
       >
         <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
           {navLinks.map((section, index) => (

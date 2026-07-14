@@ -7,9 +7,9 @@ import AnimatedHeader from "../components/AnimatedHeader";
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 858 });
   const text =
-    "I help growing brands and startups gain an\n" +
-    "unfair advantage through premium\n" +
-    "results driven webs/apps";
+    `BUILDING MODERN WEB APPLICATIONS
+    WITH CLEAN CODE, SCALABLE SYSTEMS,
+    AND THOUGHTFUL USER EXPERIENCES.`;
 
   return (
     <section

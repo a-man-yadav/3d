@@ -6,12 +6,19 @@ import gsap from "gsap";
 
 const About = () => {
   const imgRef = useRef(null);
-  const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
-  When I’m not shipping:
-⚡️ Open-sourcing my latest experiment (or hacking on yours)
-🎥 Teaching devs on Twitch/YouTube—because rising tides lift all ships
-🧗 Rock climbing (problem-solving with real stakes)
-🎸 Strumming chords while CI pipelines pass (multitasking at its finest)`;
+  const aboutText = `I'm a full-stack developer passionate about creating modern web applications with clean architecture and intuitive user experiences.
+
+Currently focused on React, Node.js, MongoDB, Redis, and React Native, I'm always learning new technologies and building projects that solve real-world problems.
+
+When I'm not coding:
+
+💻 Building personal projects
+
+🧩 Solving Some problems
+
+📚 Learning new technologies
+
+🚀 Experimenting with UI animations`;
   const text =
     "Passionate about clean architecture and I build\n" +
     "scalable,high performance solutions from\n" +

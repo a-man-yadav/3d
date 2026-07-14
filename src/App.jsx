@@ -8,6 +8,8 @@ import About from "./sections/About";
 import Work from "./sections/Work";
 import ContractSummary from "./sections/ContractSummary";
 import Contact from "./sections/Contact";
+import TechStach from "./sections/TechStach";
+import Education from "./sections/Education";
 
 const App = () => {
   return (
@@ -15,9 +17,11 @@ const App = () => {
       <Navbar />
       <Hero />
       <ServiceSummary />
-      <Services />
       <About />
+      <TechStach/>
+      <Services />
       <Work />
+      <Education/>
       <ContractSummary />
       <Contact />
     </ReactLenis>
