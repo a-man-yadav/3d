@@ -18,7 +18,7 @@ const Hero = () => {
     >
       <AnimatedHeader
         subtitle={"404 No Bugs Found"}
-        tilte={"Aman Yadav"}
+        title={"Aman Yadav"}
         text={text}
         textColor={"text-black"}
       />

@@ -181,5 +181,131 @@ const projects = [
   },
 ];
 
+const frontend = [
+  {
+    id: 1,
+    name: "HTML",
+    image: "/logos/html.png",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    image: "/logos/css.png",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    image: "/logos/java-script.png",
+  },
+  {
+    id: 4,
+    name: "React",
+    image: "/logos/react.png",
+  },
+  {
+    id: 5,
+    name: "Tailwind",
+    image: "/logos/tailwind.jpg",
+  },
+  {
+    id: 6,
+    name: "Framer",
+    image: "/logos/framer.svg",
+  },
+  {
+    id: 7,
+    name: "GSAP",
+    image: "/logos/gsap.svg",
+  },
+];
+const backend =[
+  {
+    id: 1,
+    name: "Node.js",
+    image: "/logos/node.svg",
+  },
+  {
+    id: 2,
+    name: "Express.js",
+    image: "/logos/express.png",
+  },
+  {
+    id: 3,
+    name: "REST APIs",
+    image: "/logos/rest.png",
+  },
+  {
+    id: 4,
+    name: "Web Socket",
+    image: "/logos/websocket.svg",
+  },
+  {
+    id: 5,
+    name: "jwt",
+    image: "/logos/jwt.svg",
+  }
+]
+const database =[
+  {
+    id: 1,
+    name: "MongoDB",
+    image: "/logos/mongodb.svg",
+  },
+  {
+    id: 2,
+    name: "Redis",
+    image: "/logos/redis.svg",
+  }
+]
+const tools =[
+  {
+    id: 1,
+    name: "Git",
+    image: "/logos/git.svg",
+  },
+  {
+    id: 2,
+    name: "GitHub",
+    image: "/logos/github.svg",
+  },
+  {
+    id: 3,
+    name: "Docker",
+    image: "/logos/docker.svg",
+  },
+  {
+    id: 4,
+    name: "Vercel",
+    image: "/logos/vercel.svg",
+  },
+  {
+    id: 5,
+    name: "Cloudinary",
+    image: "/logos/cloudinary.svg",
+  },
+  {
+    id: 6,
+    name: "Postman",
+    image: "/logos/postman.svg",
+  }
+]
+const other =[
+  {
+    id: 1,
+    name: "C",
+    image: "/logos/c.png",
+  },
+  {
+    id: 2,
+    name: "C++",
+    image: "/logos/c++.svg",
+  },
+  {
+    id: 3,
+    name: "Python",
+    image: "/logos/python.svg",
+  }
+]
 
-export {navLinks, servicesData, projects, socials, items};
+
+export {navLinks, servicesData, projects, socials, items, frontend, backend, database, tools, other};

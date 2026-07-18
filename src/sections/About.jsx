@@ -20,9 +20,9 @@ When I'm not coding:
 
 🚀 Experimenting with UI animations`;
   const text =
-    "Passionate about clean architecture and I build\n" +
-    "scalable,high performance solutions from\n" +
-    " prototype to production";
+   ` Passionate about clean architecture and I build +
+    scalable,high performance solutions from +
+    prototype to production`;
 
   useGSAP(() => {
     gsap.to("#about", {
@@ -46,20 +46,20 @@ When I'm not coding:
     });
   });
   return (
-    <section id="about" className="min-h-screen bg-black rounded-b-4xl py-10">
+    <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeader
         subtitle={"Code with purpose, Built to scale"}
-        tilte={"About"}
+        title={"About"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-12 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
           src="images/me.png"
           alt="me"
-          className="w-md rounded-3xl"
+          className="w-md h-md rounded-3xl"
         />
         <AnimatedText text={aboutText} className={"w-full"} />
       </div>

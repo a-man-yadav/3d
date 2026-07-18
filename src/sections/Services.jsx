@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   const text =
-    "I build secure, high-performance full-stack apps with \n" +
-    "smoothUX to drive growth not headaches.";
+    `I build secure, high-performance full-stack apps with
+    smooth UX to drive growth not headaches.`;
   const serviceRefs = useRef([]);
   const isDesktop = useMediaQuery({ minWidth: "768px" });
 
@@ -35,7 +35,7 @@ const Services = () => {
     <section id="services" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeader
         subtitle={"Behind the scene, Beyond the screen"}
-        tilte={"What I Build"}
+        title={"What I Build"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
