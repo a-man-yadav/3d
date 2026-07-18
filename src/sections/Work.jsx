@@ -113,7 +113,10 @@ const Works = () => {
         onMouseMove={handleMouseMove}
       >
         {projects.map((project, index) => (
-          <div
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
             key={project.id}
             id="project"
             className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
@@ -158,7 +161,7 @@ const Works = () => {
                 className="absolute bg-center px-14 rounded-xl"
               />
             </div>
-          </div>
+          </a>
         ))}
         <div
           ref={previewRef}

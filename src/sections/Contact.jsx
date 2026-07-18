@@ -3,17 +3,30 @@ import Marquee from "../components/Marquee";
 import { socials } from "../constants";
 import gsap from "gsap";
 import AnimatedHeader from "../components/AnimatedHeader";
+import { FaRegCopy } from "react-icons/fa";
+import { RiCheckDoubleLine } from "react-icons/ri";
+import { useState } from "react";
 
 const Contact = () => {
   const text = `Got a question, how or project Idea?
     WE’D love to hear from you and discus further!`;
-  const items = [
-    "just imagine, I code",
-    "just imagine, I code",
-    "just imagine, I code",
-    "just imagine, I code",
-    "just imagine, I code",
-  ];
+
+  const email = "aman17yadav2004@gmail.com";
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   useGSAP(() => {
     gsap.from(".social-link", {
       y: 100,
@@ -45,15 +58,21 @@ const Contact = () => {
             <div className="social-link">
               <h2>E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl text-white/70 tracking-wider lowercase md:text-2xl lg:text-3xl">
-                aman17yadav2004@gmail.com
+              <p className="text-xl text-white/70 flex gap-4 tracking-wider lowercase md:text-2xl lg:text-3xl">
+                {email}
+                <button
+                  onClick={copyEmail}
+                  className=" cursor-pointer"
+                >
+                  {copied ? <RiCheckDoubleLine /> : <FaRegCopy />}
+                </button>
               </p>
             </div>
             <div className="social-link">
               <h2>Phone</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <p className="text-xl lowercase text-white/70 md:text-2xl lg:text-3xl">
-               895 707 7945
+                895 707 7945
               </p>
             </div>
             <div className="social-link">
@@ -63,10 +82,12 @@ const Contact = () => {
                 {socials.map((social, index) => (
                   <a
                     key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={social.href}
                     className=""
                   >
-                    <social.icon className="text-4xl text-white/70 hover:text-white/90 transition-colors duration-200"/>
+                    <social.icon className="text-4xl text-white/70 hover:text-white/90 transition-colors duration-200" />
                   </a>
                 ))}
               </div>

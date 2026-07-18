@@ -21,7 +21,7 @@ const App = () => {
       <TechStack/>
       <Services />
       <Work />
-      <Education/>
+      {/* <Education/> */}
       <ContractSummary />
       <Contact />
     </ReactLenis>

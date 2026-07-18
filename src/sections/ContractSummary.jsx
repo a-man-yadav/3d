@@ -34,7 +34,7 @@ const ContractSummary = () => {
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16 "
+      className="flex flex-col items-center justify-between min-h-screen gap-12 "
     >
       <Marquee items={items} reverse={false} />
       <div className="overflow-hidden font-light text-center contact-text-responsive">

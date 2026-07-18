@@ -3,6 +3,8 @@ import { navLinks, socials } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import { RiCheckDoubleLine } from "react-icons/ri";
+import { FaRegCopy } from "react-icons/fa";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -15,6 +17,22 @@ const Navbar = () => {
   const burgerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(true);
+
+  const email = "aman17yadav2004@gmail.com";
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
@@ -86,7 +104,7 @@ const Navbar = () => {
   //   });
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
-  
+
   //for opening and closing navbar
   const toggleMenu = () => {
     if (isOpen) {
@@ -151,7 +169,13 @@ const Navbar = () => {
           <div className="font-light">
             <p className="tracking-wider text-white/50">E-mail</p>
             <p className="lowercase text-xl text-pretty tracking-widest">
-              AmanYadav@gmail.com
+              {email}
+              <button
+                onClick={copyEmail}
+                className=" cursor-pointer"
+              >
+                {copied ? <RiCheckDoubleLine /> : <FaRegCopy />}
+              </button>
             </p>
           </div>
           <div className="font-light mr-20">
@@ -160,6 +184,8 @@ const Navbar = () => {
               {socials.map((site, index) => (
                 <a
                   href={site.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
                   className="text-2xl leading-loose tracking-widest uppercase hover:text-white transition-colors duration-300 "
                   key={index}
                 >

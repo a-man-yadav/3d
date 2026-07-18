@@ -60,7 +60,7 @@ const Services = () => {
               <p className="text-base text-white/60 lg:text-xl leading-relaxed text-pretty ">
                 {service.description}{" "}
               </p>
-              <div className="flex flex-col gap-2 w-[100vw] text-2xl sm:gap-4 lg:text-3xl text-white/80">
+              <div className="flex flex-col gap-2 w-screen text-2xl sm:gap-4 lg:text-3xl text-white/80">
                 {service.items.map((item, itemIndex) => (
                   <div  key={`item-${index}-${itemIndex}`}>
                     <h3 className="flex">
