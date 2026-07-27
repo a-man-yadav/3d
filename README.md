@@ -1,6 +1,6 @@
 # 🪐 Aman Yadav — 3D Interactive Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀_Click_Here-cfa355?style=for-the-badge&logo=vercel&logoColor=white)](YOUR_DEPLOYED_URL_HERE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀_Click_Here-cfa355?style=for-the-badge&logo=vercel&logoColor=white)](https://amanyadav8957.vercel.app/)
 
 > **"Building modern web applications with clean code, scalable systems, and thoughtful user experiences."**
 
@@ -10,7 +10,7 @@ Welcome to the repository of **Aman Yadav's 3D Interactive Portfolio** — a mod
 
 ## 🔗 Live Experience
 
-* **Deployed Link**: [https://YOUR_DEPLOYED_URL_HERE](YOUR_DEPLOYED_URL_HERE) *(Replace `YOUR_DEPLOYED_URL_HERE` with your actual Vercel / Netlify live URL)*
+* **Deployed Link**: https://amanyadav8957.vercel.app/ *(Replace `YOUR_DEPLOYED_URL_HERE` with your actual Vercel / Netlify live URL)*
 
 ---
 
