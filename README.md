@@ -10,8 +10,7 @@ Welcome to the repository of **Aman Yadav's 3D Interactive Portfolio** — a mod
 
 ## 🔗 Live Experience
 
-* **Deployed Link**: https://amanyadav8957.vercel.app/ *(Replace `YOUR_DEPLOYED_URL_HERE` with your actual Vercel / Netlify live URL)*
-
+* **Deployed Link**: (https://amanyadav8957.vercel.app/)
 ---
 
 ## ⚡ Engine & Technological Foundation
@@ -159,7 +158,3 @@ Follow these steps to run the portfolio locally on your machine:
    ```
 
 ---
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information. Developed with ❤️ by **Aman Yadav**.
