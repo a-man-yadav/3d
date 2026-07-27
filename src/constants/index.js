@@ -1,9 +1,11 @@
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const socials = [
   { name: "Instagram", href: "https://www.instagram.com/a_man_yadav_", icon: FaInstagram },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/aman-yadav-799a1b39b/", icon: FaLinkedin },
   { name: "GitHub", href: "https://github.com/a-man-yadav/", icon: FaGithub },
+  { name: "LeetCode", href: "https://leetcode.com/u/aman_yadav_7887/", icon: SiLeetcode }
 ];
 const navLinks = ["home", "about", "services", "work", "contact"];
 
